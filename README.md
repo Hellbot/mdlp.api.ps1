@@ -60,7 +60,7 @@ Send-MailMessage -Attachments "Report.zip"
 или еще короче 
 ```PowerShell
 Enter-MDLPSession @Settings 
-Create-MDLPExportTast -ReportID "GENERAL_REPORT_ON_REMAINING_ITEMS" | Wait-MDLPExportTask | Save-MDLPExportResult -Result $Result -File "Report.zip" | Request-MDLPExportResultRemove
+Create-MDLPExportTast -ReportID "GENERAL_REPORT_ON_REMAINING_ITEMS" | Wait-MDLPExportTask | Save-MDLPExportResult -File "Report.zip" | Request-MDLPExportResultRemove
 Send-MailMessage -Attachments "Report.zip"
 ```
 
