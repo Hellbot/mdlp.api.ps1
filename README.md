@@ -49,7 +49,7 @@ $Settings = @{
 ### Примеры использования
 ```PowerShell
 Enter-MDLPSession @Settings
-$Task = Create-MDLPExportTast -ReportID "GENERAL_REPORT_ON_REMAINING_ITEMS"
+$Task = Create-MDLPExportTask -ReportID "GENERAL_REPORT_ON_REMAINING_ITEMS"
 Start-Sleep 30 # Speculative wait due to heavy limits on API for query results
 $Result = Wait-MDLPExportTask -Task $Task 
 Save-MDLPExportResult -Result $Result -File "Report.zip" 
@@ -60,7 +60,7 @@ Send-MailMessage -Attachments "Report.zip"
 или еще короче 
 ```PowerShell
 Enter-MDLPSession @Settings 
-Create-MDLPExportTast -ReportID "GENERAL_REPORT_ON_REMAINING_ITEMS" | Wait-MDLPExportTask | Save-MDLPExportResult -File "Report.zip" | Request-MDLPExportResultRemove
+Create-MDLPExportTask -ReportID "GENERAL_REPORT_ON_REMAINING_ITEMS" | Wait-MDLPExportTask | Save-MDLPExportResult -File "Report.zip" | Request-MDLPExportResultRemove
 Send-MailMessage -Attachments "Report.zip"
 ```
 
