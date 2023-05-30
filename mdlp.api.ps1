@@ -27,7 +27,7 @@ PS> Send-MailMessage -Attachments "Report.zip"
 
 * Метод создания нового задания на выгрузку
   API: data/export/tasks
-  PS:  Create-MDLPExportTask
+  PS:  New-MDLPExportTask
 
 * Метод получения статуса задания на выгрузку
   API: data/export/tasks/{task_id}
@@ -64,7 +64,7 @@ $Script:Methods = @(
     'Set-MDLPSessionToken'
     'Invoke-MDLPMethod'
     'Sign-MDLPData'
-    'Create-MDLPExportTask'
+    'New-MDLPExportTask'
     'Get-MDLPExportTaskStatus'
     'Get-MDLPExportResults'
     'Save-MDLPExportResult'
@@ -288,7 +288,7 @@ function Set-MDLPSessionToken {
     }
 }
 
-function Create-MDLPExportTask {
+function New-MDLPExportTask {
     param(
         [Parameter(Mandatory)] $Session,
         [string] $ReportID,

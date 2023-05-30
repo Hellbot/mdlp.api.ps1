@@ -79,7 +79,7 @@ foreach ($ReportName in $WantedReports.Keys) {
     }
 
     Write-Host "$ReportName - Creating export task"
-    $Task = Create-MDLPExportTask -ReportID $WantedReports[$ReportName]['report_id'] -Params $WantedReports[$ReportName]['params']        
+    $Task = New-MDLPExportTask -ReportID $WantedReports[$ReportName]['report_id'] -Params $WantedReports[$ReportName]['params']        
     if (!$Task) {
         Write-Error "Unable to create export task"
         Continue
