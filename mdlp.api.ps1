@@ -70,6 +70,7 @@ $Script:Methods = @(
     'Save-MDLPExportResult'
     'Request-MDLPExportResultRemove'
     'Modify-MDLPSession'
+    'Wait-MDLPExportTask'
 )
 
 $Script:APIThrottleLimits = @{
