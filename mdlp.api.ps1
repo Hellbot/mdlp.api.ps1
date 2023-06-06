@@ -300,7 +300,7 @@ function New-MDLPExportTask {
         'report_id' = $ReportID
     }
 
-    if ($Params) {
+    if ($Params -and $Params.Count) {
         $Body['params'] = $Params
     }
 
